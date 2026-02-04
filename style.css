@@ -29,7 +29,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.flag-container {
+* .flag-container {
     width: 100%;
     height: 140px;
     display: flex;
@@ -55,19 +55,148 @@
 #pagination {
     margin: 30px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
-#pagination button {
-    padding: 8px 20px;
-    margin: 0 10px;
+.pagination-btn {
+    padding: 8px 16px;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* Rounded corners like in the image */
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.pagination-btn.active {
+    background-color: #1a1a2e;
+    /* Dark background for active state */
+    color: #fff;
+    border-color: #1a1a2e;
+}
+
+.pagination-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination-dots {
+    color: #777;
+    margin: 0 5px;
+}
+
+
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-body {
+    margin-top: 20px;
+}
+
+#modal-body img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.modal-detail {
+    margin: 10px 0;
+    text-align: left;
     font-size: 16px;
 }
 
-#pagination button:hover {
-    background-color: #0056b3;
+.modal-detail strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.loading-text {
+    font-style: italic;
+    color: #888;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Search Bar Styles */
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #1a1a2e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

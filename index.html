@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for a country...">
+    </div>
+
     <div id="countries"></div>
 
-    <div id="pagination">
-        <button id="prev">Prev</button>
-        <span id="pageInfo"></span>
-        <button id="next">Next</button>
+    <div id="pagination"></div>
+
+    <div id="countryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
